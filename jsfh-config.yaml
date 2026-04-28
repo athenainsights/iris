@@ -1,0 +1,8 @@
+# JSFH configuration file
+# https://coveooss.github.io/json-schema-for-humans/examples/examples_js_default/Configuration.html
+template_name: js
+expand_buttons: true
+description_is_markdown: false
+with_footer: false
+collapse_long_descriptions: false
+collapse_long_examples: false
