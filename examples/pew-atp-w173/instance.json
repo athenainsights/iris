@@ -1,0 +1,1627 @@
+{
+  "schema_version": "dev",
+  "study_id": "pew-atp-w173",
+  "title": "Pew ATP Wave 173 - AI and its impact",
+  "publisher": {
+    "display_name": "Pew Research Center",
+    "url": "https://www.pewresearch.org/",
+    "roles": ["pollster", "publisher"]
+  },
+  "methodology_notes": "Wave 173 of Pew Research Center's American Trends Panel (ATP), a probability-based online panel recruited via address-based sampling. The June 2025 wave was fielded primarily online, with some interviews conducted by live telephone; programming shown in this encoding follows the online administration. Weights are raked to demographic benchmarks. Every published percentage in this file is reported under base.kind=\"all\", so 'Not sure' and 'No answer' appear in the denominator. Following Pew convention, published \"<1\" percentages are rendered here as 1. The \"No answer\" code captures web respondents who did not answer, phone respondents who refused, and phone respondents who said they did not know how to answer - except where \"Not sure\" was offered as an explicit option, in which case \"No answer\" is limited to web skips and phone refusals. Prior-wave entries (2021-2024) are carried as trend-reference stubs so trend rows from the topline can be read as a single series; authoritative methodology for those waves lives with the original Pew releases.",
+
+  "subgroup_schema": {
+    "variables": [
+      {
+        "id": "x_form",
+        "label": "Form assignment (split-sample randomization)",
+        "values": [
+          { "code": 1, "label": "Form 1" },
+          { "code": 2, "label": "Form 2" }
+        ]
+      },
+      {
+        "id": "age_band",
+        "label": "Age band",
+        "values": [
+          { "code": "18_29", "label": "18-29" },
+          { "code": "30_49", "label": "30-49" },
+          { "code": "50_64", "label": "50-64" },
+          { "code": "65_plus", "label": "65+" }
+        ]
+      },
+      {
+        "id": "gender",
+        "label": "Gender",
+        "values": [
+          { "code": "men", "label": "Men" },
+          { "code": "women", "label": "Women" }
+        ]
+      },
+      {
+        "id": "race_ethnicity",
+        "label": "Race and ethnicity (Pew convention: White, Black, Asian = single-race, non-Hispanic; Hispanic = any race)",
+        "values": [
+          { "code": "white_nh", "label": "White" },
+          { "code": "black_nh", "label": "Black" },
+          { "code": "hispanic", "label": "Hispanic" },
+          { "code": "asian_nh", "label": "Asian (English-speakers only)" }
+        ]
+      },
+      {
+        "id": "education",
+        "label": "Educational attainment",
+        "values": [
+          { "code": "postgrad", "label": "Postgrad" },
+          { "code": "college_grad", "label": "College grad" },
+          { "code": "some_college", "label": "Some college" },
+          { "code": "hs_or_less", "label": "HS or less" }
+        ]
+      },
+      {
+        "id": "party_id_with_leaners",
+        "label": "Partisan identification with leaners",
+        "values": [
+          { "code": "rep_lean_rep", "label": "Rep/Lean Rep" },
+          { "code": "dem_lean_dem", "label": "Dem/Lean Dem" }
+        ]
+      }
+    ]
+  },
+
+  "questions": [
+    {
+      "id": "ai_heard",
+      "stem": "",
+      "dimensions": [
+        {
+          "id": "main",
+          "text": "Artificial intelligence (AI) is designed to learn tasks that humans typically do, for instance recognizing speech or pictures. How much have you heard or read about AI?"
+        }
+      ],
+      "response_space": {
+        "kind": "enum",
+        "ordered": true,
+        "codes": [
+          { "code": 1, "label": "A lot", "value": 2 },
+          { "code": 2, "label": "A little", "value": 1 },
+          { "code": 3, "label": "Nothing at all", "value": 0 },
+          { "code": 99, "label": "No answer", "missing": true, "missing_kind": "skipped" }
+        ]
+      }
+    },
+
+    {
+      "id": "cncexc",
+      "stem": "",
+      "concept_refs": [
+        { "scheme": "local", "id": "cncexc" }
+      ],
+      "notes": "Rotation: options 1-2/2-1 with option 3 always held last.",
+      "dimensions": [
+        {
+          "id": "main",
+          "text": "Overall, would you say the increased use of artificial intelligence (AI) in daily life makes you feel\u2026"
+        }
+      ],
+      "response_space": {
+        "kind": "enum",
+        "ordered": false,
+        "codes": [
+          { "code": 1, "label": "More excited than concerned", "pole": "positive" },
+          { "code": 2, "label": "More concerned than excited", "pole": "negative" },
+          { "code": 3, "label": "Equally concerned and excited", "pole": "neutral" },
+          { "code": 99, "label": "No answer", "missing": true, "missing_kind": "skipped" }
+        ]
+      }
+    },
+
+    {
+      "id": "cncexc_2021",
+      "stem": "",
+      "concept_refs": [
+        { "scheme": "local", "id": "cncexc" }
+      ],
+      "notes": "November 2021 wording variant of Pew's CNCEXC question. Bridged to cncexc via a shared concept_ref (scheme=local, id=cncexc) so consumers can derive a trend line across the wording change. Pew treats the two wordings as a single trend in published toplines.",
+      "dimensions": [
+        {
+          "id": "main",
+          "text": "Artificial intelligence computer programs are designed to learn tasks that humans typically do, for instance recognizing speech or pictures. Overall, would you say the increased use of artificial intelligence computer programs in daily life makes you feel\u2026"
+        }
+      ],
+      "response_space": {
+        "kind": "enum",
+        "ordered": false,
+        "codes": [
+          { "code": 1, "label": "More excited than concerned", "pole": "positive" },
+          { "code": 2, "label": "More concerned than excited", "pole": "negative" },
+          { "code": 3, "label": "Equally concerned and excited", "pole": "neutral" },
+          { "code": 99, "label": "No answer", "missing": true, "missing_kind": "skipped" }
+        ]
+      }
+    },
+
+    {
+      "id": "ai_knowuse",
+      "stem": "",
+      "notes": "Rotation: response options 1-5/5-1.",
+      "dimensions": [
+        {
+          "id": "main",
+          "text": "Looking ahead, how important do you think it is for people to understand what artificial intelligence (AI) is?"
+        }
+      ],
+      "response_space": {
+        "kind": "enum",
+        "ordered": true,
+        "codes": [
+          { "code": 1, "label": "Extremely important", "value": 4, "pole": "positive" },
+          { "code": 2, "label": "Very important", "value": 3, "pole": "positive" },
+          { "code": 3, "label": "Somewhat important", "value": 2, "pole": "neutral" },
+          { "code": 4, "label": "Not too important", "value": 1, "pole": "negative" },
+          { "code": 5, "label": "Not at all important", "value": 0, "pole": "negative" },
+          { "code": 99, "label": "No answer", "missing": true, "missing_kind": "skipped" }
+        ]
+      }
+    },
+
+    {
+      "id": "ai2happen",
+      "stem": "How concerned are you about each of the following for society?",
+      "notes": "Items randomized; response options rotated 1-5/5-1 in the same order as AI_KNOWUSE, holding option 6 (Not sure) last.",
+      "dimensions": [
+        {
+          "id": "miss_opp",
+          "text": "People will miss opportunities to improve their lives by being too reluctant to use artificial intelligence (AI)"
+        },
+        {
+          "id": "ability_worsens",
+          "text": "People's ability to do things on their own will get worse because of using artificial intelligence (AI)"
+        }
+      ],
+      "response_space": {
+        "kind": "enum",
+        "ordered": true,
+        "codes": [
+          { "code": 1, "label": "Extremely concerned", "value": 4 },
+          { "code": 2, "label": "Very concerned", "value": 3 },
+          { "code": 3, "label": "Somewhat concerned", "value": 2 },
+          { "code": 4, "label": "Not too concerned", "value": 1 },
+          { "code": 5, "label": "Not at all concerned", "value": 0 },
+          { "code": 6, "label": "Not sure", "missing": true, "missing_kind": "dk" },
+          { "code": 99, "label": "No answer", "missing": true, "missing_kind": "skipped" }
+        ]
+      }
+    },
+
+    {
+      "id": "ai_bene",
+      "stem": "",
+      "notes": "Rotation: response options 1-5/5-1 in the same order as AI_RISK, holding option 6 (Not sure) last.",
+      "dimensions": [
+        {
+          "id": "main",
+          "text": "How would you rate the benefits of artificial intelligence (AI) for society as a whole?"
+        }
+      ],
+      "response_space": {
+        "kind": "enum",
+        "ordered": true,
+        "codes": [
+          { "code": 1, "label": "Very high", "value": 4, "pole": "positive" },
+          { "code": 2, "label": "High", "value": 3, "pole": "positive" },
+          { "code": 3, "label": "Medium", "value": 2, "pole": "neutral" },
+          { "code": 4, "label": "Low", "value": 1, "pole": "negative" },
+          { "code": 5, "label": "Very low", "value": 0, "pole": "negative" },
+          { "code": 6, "label": "Not sure", "missing": true, "missing_kind": "dk" },
+          { "code": 99, "label": "No answer", "missing": true, "missing_kind": "skipped" }
+        ]
+      }
+    },
+
+    {
+      "id": "ai_bene_oehigh",
+      "stem": "",
+      "notes": "Post-coded open-ended probe. Coders may assign multiple codes per verbatim response, so category percentages can sum to more than 100 - hence distribution.kind=\"multi_select\". Net percentages report the share of respondents who gave at least one response in the net's member categories.",
+      "skip_notes": "Asked only of Form 1 respondents whose AI_BENE answer was 1 (Very high) or 2 (High). [N=687]",
+      "dimensions": [
+        {
+          "id": "main",
+          "text": "What is the main reason you rate the benefits of artificial intelligence (AI) as [IF AI_BENE=1 INSERT: \"very\"] high for society?"
+        }
+      ],
+      "response_space": {
+        "kind": "enum",
+        "ordered": false,
+        "codes": [
+          { "code": "make_humans_better", "label": "Make humans better at doing tasks" },
+          { "code": "time_better_ways", "label": "Humans will spend their time in better ways" },
+          { "code": "improve_health_science", "label": "Improvements to health, medicine and scientific research" },
+          { "code": "learn_more", "label": "Learn more, increased access to information" },
+          { "code": "tech_benefits", "label": "Specific technological benefits" },
+          { "code": "creativity", "label": "Increased creativity" },
+          { "code": "general_societal_benefits", "label": "General societal benefits, push society forward" },
+          { "code": "general_positive", "label": "General positive statement about AI" },
+          { "code": "general_economic", "label": "General economic benefits" },
+          { "code": "fill_labor_jobs", "label": "Fill labor shortages, create jobs" },
+          { "code": "accessibility", "label": "Benefits people in need/Increases accessibility" },
+          { "code": "benefits_low", "label": "Benefits are low" },
+          { "code": "both_benefits_risks", "label": "There are both benefits and risks" },
+          { "code": "other", "label": "Other" },
+          { "code": "unclear", "label": "Unclear" },
+          { "code": "dk", "label": "Don't know", "missing": true, "missing_kind": "dk" },
+          { "code": "no_answer", "label": "No answer", "missing": true, "missing_kind": "skipped" }
+        ],
+        "nets": [
+          { "id": "efficient_net", "label": "Make people more efficient", "members": ["make_humans_better", "time_better_ways"] },
+          { "id": "expand_abilities_net", "label": "Expand human and technological abilities", "members": ["improve_health_science", "learn_more", "tech_benefits", "creativity"] },
+          { "id": "economic_net", "label": "Economic benefits/Fill labor", "members": ["general_economic", "fill_labor_jobs"] }
+        ]
+      }
+    },
+
+    {
+      "id": "ai_bene_oelow",
+      "stem": "",
+      "notes": "Post-coded open-ended probe. Coders may assign multiple codes per response; distribution.kind=\"multi_select\".",
+      "skip_notes": "Asked only of Form 1 respondents whose AI_BENE answer was 4 (Low) or 5 (Very low). [N=421]",
+      "dimensions": [
+        {
+          "id": "main",
+          "text": "What is the main reason you rate the benefits of artificial intelligence (AI) as [IF AI_BENE=5 INSERT: \"very\"] low for society?"
+        }
+      ],
+      "response_space": {
+        "kind": "enum",
+        "ordered": false,
+        "codes": [
+          { "code": "too_dependent", "label": "Makes us too dependent on AI, think less, or lazy" },
+          { "code": "less_human_general", "label": "Make us less human, general" },
+          { "code": "hurts_creativity", "label": "Hurts creativity" },
+          { "code": "negative_education", "label": "Negative impact on education and art/artists" },
+          { "code": "loss_social", "label": "Loss of social connection" },
+          { "code": "unproven", "label": "AI is unproven, don't trust" },
+          { "code": "dont_trust_data", "label": "Don't trust the data used" },
+          { "code": "dont_trust_tech_companies", "label": "Don't trust tech companies, general" },
+          { "code": "general_dislike", "label": "Generally dislike AI/AI is unnecessary" },
+          { "code": "deepfakes", "label": "Hard to tell what is real or the result of AI, including deepfakes" },
+          { "code": "hallucinations", "label": "AI mistakes, including hallucinations" },
+          { "code": "misinformation", "label": "Promotes misinformation" },
+          { "code": "no_control", "label": "No control over AI" },
+          { "code": "ai_taking_over", "label": "AI taking over" },
+          { "code": "bad_purposes", "label": "People will use AI for bad purposes, such as scams and hacking" },
+          { "code": "job_loss", "label": "Job loss" },
+          { "code": "safety", "label": "Concerns about safety" },
+          { "code": "privacy_security", "label": "Privacy/Security concerns" },
+          { "code": "unknown_interaction", "label": "Unknown interaction with AI" },
+          { "code": "environment", "label": "Negative impact on environment" },
+          { "code": "inequality", "label": "Inequality concerns" },
+          { "code": "risks_low", "label": "Risks are low" },
+          { "code": "unclear", "label": "Unclear" },
+          { "code": "other", "label": "Other" },
+          { "code": "dk", "label": "Don't know", "missing": true, "missing_kind": "dk" },
+          { "code": "no_answer", "label": "No answer", "missing": true, "missing_kind": "skipped" }
+        ],
+        "nets": [
+          { "id": "erodes_abilities_net", "label": "Erodes human abilities and connections", "members": ["too_dependent", "less_human_general", "hurts_creativity", "negative_education", "loss_social"] },
+          { "id": "distrust_ai_net", "label": "Don't trust AI or tech companies", "members": ["unproven", "dont_trust_data", "dont_trust_tech_companies"] },
+          { "id": "accuracy_net", "label": "Negative impact on accuracy of information", "members": ["deepfakes", "hallucinations", "misinformation"] },
+          { "id": "control_net", "label": "Concerns over human control of AI", "members": ["no_control", "ai_taking_over"] },
+          { "id": "safety_privacy_net", "label": "Concerns about safety/privacy, cybersecurity", "members": ["safety", "privacy_security", "unknown_interaction"] }
+        ]
+      }
+    },
+
+    {
+      "id": "ai_risk",
+      "stem": "",
+      "notes": "Rotation: response options 1-5/5-1 in the same order as AI_BENE, holding option 6 (Not sure) last.",
+      "dimensions": [
+        {
+          "id": "main",
+          "text": "How would you rate the risks of artificial intelligence (AI) for society as a whole?"
+        }
+      ],
+      "response_space": {
+        "kind": "enum",
+        "ordered": true,
+        "codes": [
+          { "code": 1, "label": "Very high", "value": 4, "pole": "negative" },
+          { "code": 2, "label": "High", "value": 3, "pole": "negative" },
+          { "code": 3, "label": "Medium", "value": 2, "pole": "neutral" },
+          { "code": 4, "label": "Low", "value": 1, "pole": "positive" },
+          { "code": 5, "label": "Very low", "value": 0, "pole": "positive" },
+          { "code": 6, "label": "Not sure", "missing": true, "missing_kind": "dk" },
+          { "code": 99, "label": "No answer", "missing": true, "missing_kind": "skipped" }
+        ]
+      }
+    },
+
+    {
+      "id": "ai_risk_oehigh",
+      "stem": "",
+      "notes": "Post-coded open-ended probe. Coders may assign multiple codes per response; distribution.kind=\"multi_select\".",
+      "skip_notes": "Asked only of Form 2 respondents whose AI_RISK answer was 1 (Very high) or 2 (High). [N=1,515]",
+      "dimensions": [
+        {
+          "id": "main",
+          "text": "What is the main reason you rate the risks of artificial intelligence (AI) as [IF AI_RISK=1 INSERT: \"very\"] high for society?"
+        }
+      ],
+      "response_space": {
+        "kind": "enum",
+        "ordered": false,
+        "codes": [
+          { "code": "too_dependent", "label": "Makes us too dependent on AI, think less, or lazy" },
+          { "code": "negative_education", "label": "Negative impact on education and art/artists" },
+          { "code": "less_human_general", "label": "Make us less human, general" },
+          { "code": "loss_social", "label": "Loss of social connection" },
+          { "code": "hurts_creativity", "label": "Hurts creativity" },
+          { "code": "deepfakes", "label": "Hard to tell what is real or the result of AI, including deepfakes" },
+          { "code": "misinformation", "label": "Promotes misinformation" },
+          { "code": "hallucinations", "label": "AI mistakes, including hallucinations" },
+          { "code": "ai_taking_over", "label": "AI taking over" },
+          { "code": "no_control", "label": "No control over AI" },
+          { "code": "bad_purposes", "label": "People will use AI for bad purposes, such as scams and hacking" },
+          { "code": "job_loss", "label": "Job loss" },
+          { "code": "unproven", "label": "AI is unproven, don't trust it" },
+          { "code": "dont_trust_tech_companies", "label": "Don't trust tech companies, general" },
+          { "code": "dont_trust_data", "label": "Don't trust data used" },
+          { "code": "privacy_security", "label": "Privacy/Security concerns" },
+          { "code": "safety", "label": "Concerns about safety" },
+          { "code": "unknown_interaction", "label": "Unknown interaction with AI" },
+          { "code": "environment", "label": "Negative impact on environment" },
+          { "code": "inequality", "label": "Inequality concerns" },
+          { "code": "general_dislike", "label": "Generally dislike AI/AI is unnecessary" },
+          { "code": "risks_low", "label": "Risks are low" },
+          { "code": "unclear", "label": "Unclear" },
+          { "code": "other", "label": "Other" },
+          { "code": "dk", "label": "Don't know", "missing": true, "missing_kind": "dk" },
+          { "code": "no_answer", "label": "No answer", "missing": true, "missing_kind": "skipped" }
+        ],
+        "nets": [
+          { "id": "erodes_abilities_net", "label": "Erodes human abilities and connections", "members": ["too_dependent", "negative_education", "less_human_general", "loss_social", "hurts_creativity"] },
+          { "id": "accuracy_net", "label": "Negative impact on accuracy of information", "members": ["deepfakes", "misinformation", "hallucinations"] },
+          { "id": "control_net", "label": "Concerns over human control of AI", "members": ["ai_taking_over", "no_control"] },
+          { "id": "distrust_ai_net", "label": "Don't trust AI or tech companies", "members": ["unproven", "dont_trust_tech_companies", "dont_trust_data"] },
+          { "id": "safety_privacy_net", "label": "Concerns about safety/privacy, cybersecurity", "members": ["privacy_security", "safety", "unknown_interaction"] }
+        ]
+      }
+    },
+
+    {
+      "id": "ai_risk_oelow",
+      "stem": "",
+      "notes": "Declared but not reported: Pew suppressed the distribution because the Form 2 cohort rating risks as Low or Very Low was too small to analyze. Retained here so the schema record is complete and consumers can reference the intended construct.",
+      "skip_notes": "Asked only of Form 2 respondents whose AI_RISK answer was 4 (Low) or 5 (Very low). [N=119, suppressed]",
+      "dimensions": [
+        {
+          "id": "main",
+          "text": "What is the main reason you rate the risks of artificial intelligence (AI) as [IF AI_RISK=5 INSERT: \"very\"] low for society?"
+        }
+      ],
+      "response_space": {
+        "kind": "text"
+      }
+    },
+
+    {
+      "id": "ai_role",
+      "stem": "How much of a role do you think artificial intelligence (AI) should play in each of the following areas\u2026",
+      "notes": "Items randomized. Form 1 respondents saw items a-e; Form 2 respondents saw items f-j. Modeled here as two variants with dimensions_override.",
+      "dimensions": [
+        { "id": "govern", "text": "Making decisions about how to govern the country" },
+        { "id": "love", "text": "Judging whether two people could fall in love" },
+        { "id": "weather", "text": "Forecasting the weather" },
+        { "id": "gov_fraud", "text": "Searching for fraud in government benefits claims" },
+        { "id": "new_medicines", "text": "Developing new medicines" },
+        { "id": "jury", "text": "Selecting who should serve on a jury" },
+        { "id": "faith", "text": "Advising people about their faith in God" },
+        { "id": "suspects", "text": "Identifying suspects in a crime" },
+        { "id": "mental_health", "text": "Providing mental health support to people" },
+        { "id": "financial_crimes", "text": "Searching for financial crimes" }
+      ],
+      "response_space": {
+        "kind": "enum",
+        "ordered": true,
+        "codes": [
+          { "code": 1, "label": "AI should play a big role", "value": 2, "pole": "positive" },
+          { "code": 2, "label": "AI should play a small role", "value": 1, "pole": "neutral" },
+          { "code": 3, "label": "AI should play no role at all", "value": 0, "pole": "negative" },
+          { "code": 4, "label": "Not sure", "missing": true, "missing_kind": "dk" },
+          { "code": 99, "label": "No answer", "missing": true, "missing_kind": "skipped" }
+        ]
+      },
+      "variants": [
+        {
+          "variant_id": "form1",
+          "label": "Form 1 (items a-e)",
+          "dimensions_override": [
+            { "id": "govern", "text": "Making decisions about how to govern the country" },
+            { "id": "love", "text": "Judging whether two people could fall in love" },
+            { "id": "weather", "text": "Forecasting the weather" },
+            { "id": "gov_fraud", "text": "Searching for fraud in government benefits claims" },
+            { "id": "new_medicines", "text": "Developing new medicines" }
+          ]
+        },
+        {
+          "variant_id": "form2",
+          "label": "Form 2 (items f-j)",
+          "dimensions_override": [
+            { "id": "jury", "text": "Selecting who should serve on a jury" },
+            { "id": "faith", "text": "Advising people about their faith in God" },
+            { "id": "suspects", "text": "Identifying suspects in a crime" },
+            { "id": "mental_health", "text": "Providing mental health support to people" },
+            { "id": "financial_crimes", "text": "Searching for financial crimes" }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "paintai",
+      "stem": "",
+      "concept_refs": [
+        { "scheme": "local", "id": "ai_made_art_reaction" }
+      ],
+      "notes": "Asked to Form 1 only. Paired with songai (Form 2) via the shared concept_ref ai_made_art_reaction - the two questions probe the same construct (reaction to discovering an enjoyed work was AI-generated) across different media. Response options rotated 1-2/2-1 with option 3 always held last.",
+      "skip_notes": "Asked only of Form 1 respondents. [N=2,505]",
+      "dimensions": [
+        {
+          "id": "main",
+          "text": "Imagine you see a painting you really like. Later, you find out the painting was made by artificial intelligence (AI). Would finding out that the painting was made by AI make you\u2026"
+        }
+      ],
+      "response_space": {
+        "kind": "enum",
+        "ordered": false,
+        "codes": [
+          { "code": 1, "label": "Like the painting more", "pole": "positive" },
+          { "code": 2, "label": "Like the painting less", "pole": "negative" },
+          { "code": 3, "label": "Not change your views", "pole": "neutral" },
+          { "code": 99, "label": "No answer", "missing": true, "missing_kind": "skipped" }
+        ]
+      }
+    },
+
+    {
+      "id": "songai",
+      "stem": "",
+      "concept_refs": [
+        { "scheme": "local", "id": "ai_made_art_reaction" }
+      ],
+      "notes": "Asked to Form 2 only. Paired with paintai (Form 1) via the shared concept_ref ai_made_art_reaction. Response options rotated 1-2/2-1 with option 3 always held last.",
+      "skip_notes": "Asked only of Form 2 respondents. [N=2,518]",
+      "dimensions": [
+        {
+          "id": "main",
+          "text": "Imagine you listen to a song that you really like. Later, you find out the song was created by artificial intelligence (AI). Would finding out that the song was created by AI make you\u2026"
+        }
+      ],
+      "response_space": {
+        "kind": "enum",
+        "ordered": false,
+        "codes": [
+          { "code": 1, "label": "Like the song more", "pole": "positive" },
+          { "code": 2, "label": "Like the song less", "pole": "negative" },
+          { "code": 3, "label": "Not change your views", "pole": "neutral" },
+          { "code": 99, "label": "No answer", "missing": true, "missing_kind": "skipped" }
+        ]
+      }
+    }
+  ],
+
+  "waves": [
+    {
+      "wave_id": "w173",
+      "label": "Wave 173 - June 2025",
+      "field_dates": { "start": "2025-06-09", "end": "2025-06-15" },
+      "sample": {
+        "population": "U.S. adults 18+",
+        "n": 5023,
+        "mode": ["online", "phone_cell", "phone_landline"],
+        "frame": "probability_panel",
+        "margin_of_error": 1.6,
+        "weighting": {
+          "scheme": "raking",
+          "notes": "Weights raked to Pew Research Center's standard American Trends Panel benchmarks. Specific raking targets are documented in Pew's methodology release for this wave."
+        }
+      },
+
+      "subgroups": [
+        {
+          "id": "form1",
+          "label": "Form 1 respondents",
+          "filters": [
+            { "variable_id": "x_form", "values": [1] }
+          ],
+          "n_unweighted": 2505
+        },
+        {
+          "id": "form2",
+          "label": "Form 2 respondents",
+          "filters": [
+            { "variable_id": "x_form", "values": [2] }
+          ],
+          "n_unweighted": 2518
+        },
+        {
+          "id": "form1_bene_high",
+          "label": "Form 1 respondents who rated AI benefits High or Very high",
+          "parent_subgroup_id": "form1",
+          "n_unweighted": 687,
+          "filters": {
+            "all_of": [
+              { "variable_id": "x_form", "values": [1] },
+              { "question_id": "ai_bene", "dimension_id": "main", "values": [1, 2] }
+            ]
+          }
+        },
+        {
+          "id": "form1_bene_low",
+          "label": "Form 1 respondents who rated AI benefits Low or Very low",
+          "parent_subgroup_id": "form1",
+          "n_unweighted": 421,
+          "filters": {
+            "all_of": [
+              { "variable_id": "x_form", "values": [1] },
+              { "question_id": "ai_bene", "dimension_id": "main", "values": [4, 5] }
+            ]
+          }
+        },
+        {
+          "id": "form2_risk_high",
+          "label": "Form 2 respondents who rated AI risks High or Very high",
+          "parent_subgroup_id": "form2",
+          "n_unweighted": 1515,
+          "filters": {
+            "all_of": [
+              { "variable_id": "x_form", "values": [2] },
+              { "question_id": "ai_risk", "dimension_id": "main", "values": [1, 2] }
+            ]
+          }
+        },
+        {
+          "id": "form2_risk_low",
+          "label": "Form 2 respondents who rated AI risks Low or Very low (n=119, not reported)",
+          "parent_subgroup_id": "form2",
+          "n_unweighted": 119,
+          "filters": {
+            "all_of": [
+              { "variable_id": "x_form", "values": [2] },
+              { "question_id": "ai_risk", "dimension_id": "main", "values": [4, 5] }
+            ]
+          }
+        },
+        {
+          "id": "age_18_29",
+          "label": "Adults 18-29",
+          "filters": [
+            { "variable_id": "age_band", "values": ["18_29"] }
+          ]
+        },
+        {
+          "id": "age_30_49",
+          "label": "Adults 30-49",
+          "filters": [
+            { "variable_id": "age_band", "values": ["30_49"] }
+          ]
+        },
+        {
+          "id": "age_50_64",
+          "label": "Adults 50-64",
+          "filters": [
+            { "variable_id": "age_band", "values": ["50_64"] }
+          ]
+        },
+        {
+          "id": "age_65_plus",
+          "label": "Adults 65 and older",
+          "filters": [
+            { "variable_id": "age_band", "values": ["65_plus"] }
+          ]
+        },
+        {
+          "id": "gender_men",
+          "label": "Men",
+          "filters": [
+            { "variable_id": "gender", "values": ["men"] }
+          ]
+        },
+        {
+          "id": "gender_women",
+          "label": "Women",
+          "filters": [
+            { "variable_id": "gender", "values": ["women"] }
+          ]
+        },
+        {
+          "id": "race_white_nh",
+          "label": "White, non-Hispanic",
+          "filters": [
+            { "variable_id": "race_ethnicity", "values": ["white_nh"] }
+          ]
+        },
+        {
+          "id": "race_black_nh",
+          "label": "Black, non-Hispanic",
+          "filters": [
+            { "variable_id": "race_ethnicity", "values": ["black_nh"] }
+          ]
+        },
+        {
+          "id": "race_hispanic",
+          "label": "Hispanic",
+          "filters": [
+            { "variable_id": "race_ethnicity", "values": ["hispanic"] }
+          ]
+        },
+        {
+          "id": "race_asian_nh",
+          "label": "Asian, non-Hispanic (English-speakers only)",
+          "filters": [
+            { "variable_id": "race_ethnicity", "values": ["asian_nh"] }
+          ]
+        },
+        {
+          "id": "edu_postgrad",
+          "label": "Postgrad",
+          "filters": [
+            { "variable_id": "education", "values": ["postgrad"] }
+          ]
+        },
+        {
+          "id": "edu_college_grad",
+          "label": "College grad",
+          "filters": [
+            { "variable_id": "education", "values": ["college_grad"] }
+          ]
+        },
+        {
+          "id": "edu_some_college",
+          "label": "Some college",
+          "filters": [
+            { "variable_id": "education", "values": ["some_college"] }
+          ]
+        },
+        {
+          "id": "edu_hs_or_less",
+          "label": "HS or less",
+          "filters": [
+            { "variable_id": "education", "values": ["hs_or_less"] }
+          ]
+        },
+        {
+          "id": "party_rep_lean_rep",
+          "label": "Rep/Lean Rep",
+          "filters": [
+            { "variable_id": "party_id_with_leaners", "values": ["rep_lean_rep"] }
+          ]
+        },
+        {
+          "id": "party_dem_lean_dem",
+          "label": "Dem/Lean Dem",
+          "filters": [
+            { "variable_id": "party_id_with_leaners", "values": ["dem_lean_dem"] }
+          ]
+        }
+      ],
+
+      "results": [
+        {
+          "question_id": "ai_heard",
+          "dimension_id": "main",
+          "base": { "kind": "all", "n_unweighted": 5023 },
+          "distribution": {
+            "kind": "categorical",
+            "entries": [
+              { "code": 1, "pct": 47 },
+              { "code": 2, "pct": 48 },
+              { "code": 3, "pct": 5 },
+              { "code": 99, "pct": 1 }
+            ]
+          }
+        },
+        {
+          "question_id": "ai_heard",
+          "dimension_id": "main",
+          "subgroup_id": "age_18_29",
+          "base": { "kind": "answered", "notes": "Pew's Pg. 12 figure excludes 'No answer' from the denominator (\"Respondents who did not give an answer are not shown\"). The 'A lot' share matches the Pg. 10 age figure, which reported only that share against the same cell." },
+          "distribution": {
+            "kind": "categorical",
+            "entries": [
+              { "code": 1, "pct": 62 },
+              { "code": 2, "pct": 35 },
+              { "code": 3, "pct": 3 }
+            ]
+          }
+        },
+        {
+          "question_id": "ai_heard",
+          "dimension_id": "main",
+          "subgroup_id": "age_30_49",
+          "base": { "kind": "answered", "notes": "Pew's Pg. 12 figure excludes 'No answer' from the denominator." },
+          "distribution": {
+            "kind": "categorical",
+            "entries": [
+              { "code": 1, "pct": 51 },
+              { "code": 2, "pct": 45 },
+              { "code": 3, "pct": 3 }
+            ]
+          }
+        },
+        {
+          "question_id": "ai_heard",
+          "dimension_id": "main",
+          "subgroup_id": "age_50_64",
+          "base": { "kind": "answered", "notes": "Pew's Pg. 12 figure excludes 'No answer' from the denominator." },
+          "distribution": {
+            "kind": "categorical",
+            "entries": [
+              { "code": 1, "pct": 42 },
+              { "code": 2, "pct": 52 },
+              { "code": 3, "pct": 5 }
+            ]
+          }
+        },
+        {
+          "question_id": "ai_heard",
+          "dimension_id": "main",
+          "subgroup_id": "age_65_plus",
+          "base": { "kind": "answered", "notes": "Pew's Pg. 12 figure excludes 'No answer' from the denominator." },
+          "distribution": {
+            "kind": "categorical",
+            "entries": [
+              { "code": 1, "pct": 32 },
+              { "code": 2, "pct": 60 },
+              { "code": 3, "pct": 8 }
+            ]
+          }
+        },
+        {
+          "question_id": "ai_heard",
+          "dimension_id": "main",
+          "subgroup_id": "gender_men",
+          "base": { "kind": "answered", "notes": "Pew's Pg. 12 figure excludes 'No answer' from the denominator." },
+          "distribution": {
+            "kind": "categorical",
+            "entries": [
+              { "code": 1, "pct": 53 },
+              { "code": 2, "pct": 44 },
+              { "code": 3, "pct": 3 }
+            ]
+          }
+        },
+        {
+          "question_id": "ai_heard",
+          "dimension_id": "main",
+          "subgroup_id": "gender_women",
+          "base": { "kind": "answered", "notes": "Pew's Pg. 12 figure excludes 'No answer' from the denominator." },
+          "distribution": {
+            "kind": "categorical",
+            "entries": [
+              { "code": 1, "pct": 41 },
+              { "code": 2, "pct": 52 },
+              { "code": 3, "pct": 6 }
+            ]
+          }
+        },
+        {
+          "question_id": "ai_heard",
+          "dimension_id": "main",
+          "subgroup_id": "race_white_nh",
+          "base": { "kind": "answered", "notes": "Pew's Pg. 12 figure excludes 'No answer' from the denominator." },
+          "distribution": {
+            "kind": "categorical",
+            "entries": [
+              { "code": 1, "pct": 45 },
+              { "code": 2, "pct": 51 },
+              { "code": 3, "pct": 4 }
+            ]
+          }
+        },
+        {
+          "question_id": "ai_heard",
+          "dimension_id": "main",
+          "subgroup_id": "race_black_nh",
+          "base": { "kind": "answered", "notes": "Pew's Pg. 12 figure excludes 'No answer' from the denominator." },
+          "distribution": {
+            "kind": "categorical",
+            "entries": [
+              { "code": 1, "pct": 49 },
+              { "code": 2, "pct": 44 },
+              { "code": 3, "pct": 7 }
+            ]
+          }
+        },
+        {
+          "question_id": "ai_heard",
+          "dimension_id": "main",
+          "subgroup_id": "race_hispanic",
+          "base": { "kind": "answered", "notes": "Pew's Pg. 12 figure excludes 'No answer' from the denominator." },
+          "distribution": {
+            "kind": "categorical",
+            "entries": [
+              { "code": 1, "pct": 47 },
+              { "code": 2, "pct": 45 },
+              { "code": 3, "pct": 8 }
+            ]
+          }
+        },
+        {
+          "question_id": "ai_heard",
+          "dimension_id": "main",
+          "subgroup_id": "race_asian_nh",
+          "base": { "kind": "answered", "notes": "Pew's Pg. 12 figure excludes 'No answer' from the denominator. Asian estimates are representative of English speakers only." },
+          "distribution": {
+            "kind": "categorical",
+            "entries": [
+              { "code": 1, "pct": 65 },
+              { "code": 2, "pct": 33 },
+              { "code": 3, "pct": 2 }
+            ]
+          }
+        },
+        {
+          "question_id": "ai_heard",
+          "dimension_id": "main",
+          "subgroup_id": "edu_postgrad",
+          "base": { "kind": "answered", "notes": "Pew's Pg. 12 figure excludes 'No answer' from the denominator." },
+          "distribution": {
+            "kind": "categorical",
+            "entries": [
+              { "code": 1, "pct": 60 },
+              { "code": 2, "pct": 40 },
+              { "code": 3, "pct": 0 }
+            ]
+          }
+        },
+        {
+          "question_id": "ai_heard",
+          "dimension_id": "main",
+          "subgroup_id": "edu_college_grad",
+          "base": { "kind": "answered", "notes": "Pew's Pg. 12 figure excludes 'No answer' from the denominator." },
+          "distribution": {
+            "kind": "categorical",
+            "entries": [
+              { "code": 1, "pct": 55 },
+              { "code": 2, "pct": 43 },
+              { "code": 3, "pct": 1 }
+            ]
+          }
+        },
+        {
+          "question_id": "ai_heard",
+          "dimension_id": "main",
+          "subgroup_id": "edu_some_college",
+          "base": { "kind": "answered", "notes": "Pew's Pg. 12 figure excludes 'No answer' from the denominator." },
+          "distribution": {
+            "kind": "categorical",
+            "entries": [
+              { "code": 1, "pct": 47 },
+              { "code": 2, "pct": 49 },
+              { "code": 3, "pct": 4 }
+            ]
+          }
+        },
+        {
+          "question_id": "ai_heard",
+          "dimension_id": "main",
+          "subgroup_id": "edu_hs_or_less",
+          "base": { "kind": "answered", "notes": "Pew's Pg. 12 figure excludes 'No answer' from the denominator." },
+          "distribution": {
+            "kind": "categorical",
+            "entries": [
+              { "code": 1, "pct": 38 },
+              { "code": 2, "pct": 53 },
+              { "code": 3, "pct": 9 }
+            ]
+          }
+        },
+        {
+          "question_id": "ai_heard",
+          "dimension_id": "main",
+          "subgroup_id": "party_rep_lean_rep",
+          "base": { "kind": "answered", "notes": "Pew's Pg. 12 figure excludes 'No answer' from the denominator." },
+          "distribution": {
+            "kind": "categorical",
+            "entries": [
+              { "code": 1, "pct": 43 },
+              { "code": 2, "pct": 53 },
+              { "code": 3, "pct": 4 }
+            ]
+          }
+        },
+        {
+          "question_id": "ai_heard",
+          "dimension_id": "main",
+          "subgroup_id": "party_dem_lean_dem",
+          "base": { "kind": "answered", "notes": "Pew's Pg. 12 figure excludes 'No answer' from the denominator." },
+          "distribution": {
+            "kind": "categorical",
+            "entries": [
+              { "code": 1, "pct": 51 },
+              { "code": 2, "pct": 44 },
+              { "code": 3, "pct": 4 }
+            ]
+          }
+        },
+        {
+          "question_id": "cncexc",
+          "dimension_id": "main",
+          "base": { "kind": "all", "n_unweighted": 5023 },
+          "distribution": {
+            "kind": "categorical",
+            "entries": [
+              { "code": 1, "pct": 10 },
+              { "code": 2, "pct": 50 },
+              { "code": 3, "pct": 38 },
+              { "code": 99, "pct": 1 }
+            ]
+          }
+        },
+        {
+          "question_id": "ai_knowuse",
+          "dimension_id": "main",
+          "base": { "kind": "all", "n_unweighted": 5023 },
+          "distribution": {
+            "kind": "categorical",
+            "entries": [
+              { "code": 1, "pct": 36 },
+              { "code": 2, "pct": 37 },
+              { "code": 3, "pct": 20 },
+              { "code": 4, "pct": 3 },
+              { "code": 5, "pct": 2 },
+              { "code": 99, "pct": 1 }
+            ]
+          }
+        },
+        {
+          "question_id": "ai2happen",
+          "dimension_id": "miss_opp",
+          "base": { "kind": "all", "n_unweighted": 5023 },
+          "distribution": {
+            "kind": "categorical",
+            "entries": [
+              { "code": 1, "pct": 8 },
+              { "code": 2, "pct": 13 },
+              { "code": 3, "pct": 29 },
+              { "code": 4, "pct": 28 },
+              { "code": 5, "pct": 11 },
+              { "code": 6, "pct": 10 },
+              { "code": 99, "pct": 1 }
+            ]
+          }
+        },
+        {
+          "question_id": "ai2happen",
+          "dimension_id": "ability_worsens",
+          "base": { "kind": "all", "n_unweighted": 5023 },
+          "distribution": {
+            "kind": "categorical",
+            "entries": [
+              { "code": 1, "pct": 24 },
+              { "code": 2, "pct": 27 },
+              { "code": 3, "pct": 31 },
+              { "code": 4, "pct": 8 },
+              { "code": 5, "pct": 3 },
+              { "code": 6, "pct": 7 },
+              { "code": 99, "pct": 1 }
+            ]
+          }
+        },
+        {
+          "question_id": "ai_bene",
+          "dimension_id": "main",
+          "base": { "kind": "all", "n_unweighted": 5023 },
+          "distribution": {
+            "kind": "categorical",
+            "entries": [
+              { "code": 1, "pct": 6 },
+              { "code": 2, "pct": 19 },
+              { "code": 3, "pct": 41 },
+              { "code": 4, "pct": 12 },
+              { "code": 5, "pct": 7 },
+              { "code": 6, "pct": 15 },
+              { "code": 99, "pct": 1 }
+            ]
+          }
+        },
+        {
+          "question_id": "ai_bene_oehigh",
+          "dimension_id": "main",
+          "subgroup_id": "form1_bene_high",
+          "base": { "kind": "all", "n_unweighted": 687 },
+          "distribution": {
+            "kind": "multi_select",
+            "entries": [
+              { "code": "make_humans_better", "pct": 36 },
+              { "code": "time_better_ways", "pct": 9 },
+              { "code": "improve_health_science", "pct": 13 },
+              { "code": "learn_more", "pct": 9 },
+              { "code": "tech_benefits", "pct": 1 },
+              { "code": "creativity", "pct": 1 },
+              { "code": "general_societal_benefits", "pct": 7 },
+              { "code": "general_positive", "pct": 5 },
+              { "code": "general_economic", "pct": 2 },
+              { "code": "fill_labor_jobs", "pct": 1 },
+              { "code": "accessibility", "pct": 3 },
+              { "code": "benefits_low", "pct": 5 },
+              { "code": "both_benefits_risks", "pct": 2 },
+              { "code": "other", "pct": 2 },
+              { "code": "unclear", "pct": 4 },
+              { "code": "dk", "pct": 1 },
+              { "code": "no_answer", "pct": 20 }
+            ]
+          },
+          "stats": {
+            "nets": [
+              { "id": "efficient_net", "pct": 41 },
+              { "id": "expand_abilities_net", "pct": 23 },
+              { "id": "economic_net", "pct": 3 }
+            ]
+          }
+        },
+        {
+          "question_id": "ai_bene_oelow",
+          "dimension_id": "main",
+          "subgroup_id": "form1_bene_low",
+          "base": { "kind": "all", "n_unweighted": 421 },
+          "distribution": {
+            "kind": "multi_select",
+            "entries": [
+              { "code": "too_dependent", "pct": 27 },
+              { "code": "less_human_general", "pct": 3 },
+              { "code": "hurts_creativity", "pct": 3 },
+              { "code": "negative_education", "pct": 2 },
+              { "code": "loss_social", "pct": 2 },
+              { "code": "unproven", "pct": 8 },
+              { "code": "dont_trust_data", "pct": 1 },
+              { "code": "dont_trust_tech_companies", "pct": 1 },
+              { "code": "general_dislike", "pct": 9 },
+              { "code": "deepfakes", "pct": 3 },
+              { "code": "hallucinations", "pct": 3 },
+              { "code": "misinformation", "pct": 3 },
+              { "code": "no_control", "pct": 4 },
+              { "code": "ai_taking_over", "pct": 4 },
+              { "code": "bad_purposes", "pct": 7 },
+              { "code": "job_loss", "pct": 7 },
+              { "code": "safety", "pct": 1 },
+              { "code": "privacy_security", "pct": 1 },
+              { "code": "unknown_interaction", "pct": 2 },
+              { "code": "environment", "pct": 1 },
+              { "code": "inequality", "pct": 1 },
+              { "code": "risks_low", "pct": 0 },
+              { "code": "unclear", "pct": 6 },
+              { "code": "other", "pct": 5 },
+              { "code": "dk", "pct": 1 },
+              { "code": "no_answer", "pct": 22 }
+            ]
+          },
+          "stats": {
+            "nets": [
+              { "id": "erodes_abilities_net", "pct": 32 },
+              { "id": "distrust_ai_net", "pct": 11 },
+              { "id": "accuracy_net", "pct": 8 },
+              { "id": "control_net", "pct": 7 },
+              { "id": "safety_privacy_net", "pct": 3 }
+            ]
+          }
+        },
+        {
+          "question_id": "ai_risk",
+          "dimension_id": "main",
+          "base": { "kind": "all", "n_unweighted": 5023 },
+          "distribution": {
+            "kind": "categorical",
+            "entries": [
+              { "code": 1, "pct": 25 },
+              { "code": 2, "pct": 32 },
+              { "code": 3, "pct": 26 },
+              { "code": 4, "pct": 4 },
+              { "code": 5, "pct": 1 },
+              { "code": 6, "pct": 11 },
+              { "code": 99, "pct": 1 }
+            ]
+          }
+        },
+        {
+          "question_id": "ai_risk_oehigh",
+          "dimension_id": "main",
+          "subgroup_id": "form2_risk_high",
+          "base": { "kind": "all", "n_unweighted": 1515 },
+          "distribution": {
+            "kind": "multi_select",
+            "entries": [
+              { "code": "too_dependent", "pct": 22 },
+              { "code": "negative_education", "pct": 4 },
+              { "code": "less_human_general", "pct": 3 },
+              { "code": "loss_social", "pct": 2 },
+              { "code": "hurts_creativity", "pct": 1 },
+              { "code": "deepfakes", "pct": 11 },
+              { "code": "misinformation", "pct": 6 },
+              { "code": "hallucinations", "pct": 3 },
+              { "code": "ai_taking_over", "pct": 9 },
+              { "code": "no_control", "pct": 8 },
+              { "code": "bad_purposes", "pct": 11 },
+              { "code": "job_loss", "pct": 9 },
+              { "code": "unproven", "pct": 6 },
+              { "code": "dont_trust_tech_companies", "pct": 2 },
+              { "code": "dont_trust_data", "pct": 1 },
+              { "code": "privacy_security", "pct": 3 },
+              { "code": "safety", "pct": 2 },
+              { "code": "unknown_interaction", "pct": 2 },
+              { "code": "environment", "pct": 2 },
+              { "code": "inequality", "pct": 2 },
+              { "code": "general_dislike", "pct": 1 },
+              { "code": "risks_low", "pct": 0 },
+              { "code": "unclear", "pct": 4 },
+              { "code": "other", "pct": 6 },
+              { "code": "dk", "pct": 1 },
+              { "code": "no_answer", "pct": 16 }
+            ]
+          },
+          "stats": {
+            "nets": [
+              { "id": "erodes_abilities_net", "pct": 27 },
+              { "id": "accuracy_net", "pct": 18 },
+              { "id": "control_net", "pct": 17 },
+              { "id": "distrust_ai_net", "pct": 9 },
+              { "id": "safety_privacy_net", "pct": 5 }
+            ]
+          }
+        },
+        {
+          "question_id": "ai_role",
+          "dimension_id": "govern",
+          "variant_id": "form1",
+          "subgroup_id": "form1",
+          "base": { "kind": "all", "n_unweighted": 2505 },
+          "distribution": {
+            "kind": "categorical",
+            "entries": [
+              { "code": 1, "pct": 4 },
+              { "code": 2, "pct": 23 },
+              { "code": 3, "pct": 60 },
+              { "code": 4, "pct": 13 },
+              { "code": 99, "pct": 1 }
+            ]
+          }
+        },
+        {
+          "question_id": "ai_role",
+          "dimension_id": "love",
+          "variant_id": "form1",
+          "subgroup_id": "form1",
+          "base": { "kind": "all", "n_unweighted": 2505 },
+          "distribution": {
+            "kind": "categorical",
+            "entries": [
+              { "code": 1, "pct": 3 },
+              { "code": 2, "pct": 16 },
+              { "code": 3, "pct": 66 },
+              { "code": 4, "pct": 15 },
+              { "code": 99, "pct": 1 }
+            ]
+          }
+        },
+        {
+          "question_id": "ai_role",
+          "dimension_id": "weather",
+          "variant_id": "form1",
+          "subgroup_id": "form1",
+          "base": { "kind": "all", "n_unweighted": 2505 },
+          "distribution": {
+            "kind": "categorical",
+            "entries": [
+              { "code": 1, "pct": 35 },
+              { "code": 2, "pct": 39 },
+              { "code": 3, "pct": 12 },
+              { "code": 4, "pct": 14 },
+              { "code": 99, "pct": 1 }
+            ]
+          }
+        },
+        {
+          "question_id": "ai_role",
+          "dimension_id": "gov_fraud",
+          "variant_id": "form1",
+          "subgroup_id": "form1",
+          "base": { "kind": "all", "n_unweighted": 2505 },
+          "distribution": {
+            "kind": "categorical",
+            "entries": [
+              { "code": 1, "pct": 32 },
+              { "code": 2, "pct": 38 },
+              { "code": 3, "pct": 15 },
+              { "code": 4, "pct": 14 },
+              { "code": 99, "pct": 1 }
+            ]
+          }
+        },
+        {
+          "question_id": "ai_role",
+          "dimension_id": "new_medicines",
+          "variant_id": "form1",
+          "subgroup_id": "form1",
+          "base": { "kind": "all", "n_unweighted": 2505 },
+          "distribution": {
+            "kind": "categorical",
+            "entries": [
+              { "code": 1, "pct": 31 },
+              { "code": 2, "pct": 35 },
+              { "code": 3, "pct": 18 },
+              { "code": 4, "pct": 16 },
+              { "code": 99, "pct": 1 }
+            ]
+          }
+        },
+        {
+          "question_id": "ai_role",
+          "dimension_id": "jury",
+          "variant_id": "form2",
+          "subgroup_id": "form2",
+          "base": { "kind": "all", "n_unweighted": 2518 },
+          "distribution": {
+            "kind": "categorical",
+            "entries": [
+              { "code": 1, "pct": 5 },
+              { "code": 2, "pct": 28 },
+              { "code": 3, "pct": 47 },
+              { "code": 4, "pct": 19 },
+              { "code": 99, "pct": 1 }
+            ]
+          }
+        },
+        {
+          "question_id": "ai_role",
+          "dimension_id": "faith",
+          "variant_id": "form2",
+          "subgroup_id": "form2",
+          "base": { "kind": "all", "n_unweighted": 2518 },
+          "distribution": {
+            "kind": "categorical",
+            "entries": [
+              { "code": 1, "pct": 3 },
+              { "code": 2, "pct": 8 },
+              { "code": 3, "pct": 73 },
+              { "code": 4, "pct": 16 },
+              { "code": 99, "pct": 1 }
+            ]
+          }
+        },
+        {
+          "question_id": "ai_role",
+          "dimension_id": "suspects",
+          "variant_id": "form2",
+          "subgroup_id": "form2",
+          "base": { "kind": "all", "n_unweighted": 2518 },
+          "distribution": {
+            "kind": "categorical",
+            "entries": [
+              { "code": 1, "pct": 23 },
+              { "code": 2, "pct": 38 },
+              { "code": 3, "pct": 22 },
+              { "code": 4, "pct": 17 },
+              { "code": 99, "pct": 1 }
+            ]
+          }
+        },
+        {
+          "question_id": "ai_role",
+          "dimension_id": "mental_health",
+          "variant_id": "form2",
+          "subgroup_id": "form2",
+          "base": { "kind": "all", "n_unweighted": 2518 },
+          "distribution": {
+            "kind": "categorical",
+            "entries": [
+              { "code": 1, "pct": 11 },
+              { "code": 2, "pct": 34 },
+              { "code": 3, "pct": 36 },
+              { "code": 4, "pct": 18 },
+              { "code": 99, "pct": 1 }
+            ]
+          }
+        },
+        {
+          "question_id": "ai_role",
+          "dimension_id": "financial_crimes",
+          "variant_id": "form2",
+          "subgroup_id": "form2",
+          "base": { "kind": "all", "n_unweighted": 2518 },
+          "distribution": {
+            "kind": "categorical",
+            "entries": [
+              { "code": 1, "pct": 35 },
+              { "code": 2, "pct": 35 },
+              { "code": 3, "pct": 13 },
+              { "code": 4, "pct": 16 },
+              { "code": 99, "pct": 1 }
+            ]
+          }
+        },
+        {
+          "question_id": "paintai",
+          "dimension_id": "main",
+          "subgroup_id": "form1",
+          "base": { "kind": "all", "n_unweighted": 2505 },
+          "distribution": {
+            "kind": "categorical",
+            "entries": [
+              { "code": 1, "pct": 3 },
+              { "code": 2, "pct": 49 },
+              { "code": 3, "pct": 48 },
+              { "code": 99, "pct": 1 }
+            ]
+          }
+        },
+        {
+          "question_id": "songai",
+          "dimension_id": "main",
+          "subgroup_id": "form2",
+          "base": { "kind": "all", "n_unweighted": 2518 },
+          "distribution": {
+            "kind": "categorical",
+            "entries": [
+              { "code": 1, "pct": 3 },
+              { "code": 2, "pct": 38 },
+              { "code": 3, "pct": 58 },
+              { "code": 99, "pct": 1 }
+            ]
+          }
+        }
+      ]
+    },
+
+    {
+      "wave_id": "w150-ish_2024-08",
+      "label": "August 2024 - trend reference",
+      "field_dates": { "start": "2024-08-12", "end": "2024-08-18" },
+      "subgroups": [
+        {
+          "id": "age_18_29",
+          "label": "Adults 18-29",
+          "filters": [
+            { "variable_id": "age_band", "values": ["18_29"] }
+          ]
+        },
+        {
+          "id": "age_65_plus",
+          "label": "Adults 65 and older",
+          "filters": [
+            { "variable_id": "age_band", "values": ["65_plus"] }
+          ]
+        }
+      ],
+      "results": [
+        {
+          "question_id": "ai_heard",
+          "dimension_id": "main",
+          "base": { "kind": "all" },
+          "distribution": {
+            "kind": "categorical",
+            "entries": [
+              { "code": 1, "pct": 40 },
+              { "code": 2, "pct": 53 },
+              { "code": 3, "pct": 6 },
+              { "code": 99, "pct": 1 }
+            ]
+          }
+        },
+        {
+          "question_id": "ai_heard",
+          "dimension_id": "main",
+          "subgroup_id": "age_18_29",
+          "base": { "kind": "answered", "notes": "Pew's Pg. 13 trend chart reports only the 'A lot' share for this age cell; other substantive codes are not republished. Denominator excludes 'No answer' per the figure note." },
+          "distribution": {
+            "kind": "categorical",
+            "entries": [
+              { "code": 1, "pct": 54 }
+            ]
+          }
+        },
+        {
+          "question_id": "ai_heard",
+          "dimension_id": "main",
+          "subgroup_id": "age_65_plus",
+          "base": { "kind": "answered", "notes": "Pew's Pg. 13 trend chart reports only the 'A lot' share for this age cell." },
+          "distribution": {
+            "kind": "categorical",
+            "entries": [
+              { "code": 1, "pct": 29 }
+            ]
+          }
+        },
+        {
+          "question_id": "cncexc",
+          "dimension_id": "main",
+          "base": { "kind": "all" },
+          "distribution": {
+            "kind": "categorical",
+            "entries": [
+              { "code": 1, "pct": 11 },
+              { "code": 2, "pct": 51 },
+              { "code": 3, "pct": 38 },
+              { "code": 99, "pct": 1 }
+            ]
+          }
+        }
+      ]
+    },
+
+    {
+      "wave_id": "trend_2023-07",
+      "label": "July-August 2023 - trend reference",
+      "field_dates": { "start": "2023-07-31", "end": "2023-08-06" },
+      "subgroups": [
+        {
+          "id": "age_18_29",
+          "label": "Adults 18-29",
+          "filters": [
+            { "variable_id": "age_band", "values": ["18_29"] }
+          ]
+        },
+        {
+          "id": "age_65_plus",
+          "label": "Adults 65 and older",
+          "filters": [
+            { "variable_id": "age_band", "values": ["65_plus"] }
+          ]
+        }
+      ],
+      "results": [
+        {
+          "question_id": "ai_heard",
+          "dimension_id": "main",
+          "base": { "kind": "all" },
+          "distribution": {
+            "kind": "categorical",
+            "entries": [
+              { "code": 1, "pct": 33 },
+              { "code": 2, "pct": 56 },
+              { "code": 3, "pct": 10 },
+              { "code": 99, "pct": 1 }
+            ]
+          }
+        },
+        {
+          "question_id": "ai_heard",
+          "dimension_id": "main",
+          "subgroup_id": "age_18_29",
+          "base": { "kind": "answered", "notes": "Pew's Pg. 13 trend chart reports only the 'A lot' share for this age cell." },
+          "distribution": {
+            "kind": "categorical",
+            "entries": [
+              { "code": 1, "pct": 39 }
+            ]
+          }
+        },
+        {
+          "question_id": "ai_heard",
+          "dimension_id": "main",
+          "subgroup_id": "age_65_plus",
+          "base": { "kind": "answered", "notes": "Pew's Pg. 13 trend chart reports only the 'A lot' share for this age cell." },
+          "distribution": {
+            "kind": "categorical",
+            "entries": [
+              { "code": 1, "pct": 27 }
+            ]
+          }
+        },
+        {
+          "question_id": "cncexc",
+          "dimension_id": "main",
+          "base": { "kind": "all" },
+          "distribution": {
+            "kind": "categorical",
+            "entries": [
+              { "code": 1, "pct": 10 },
+              { "code": 2, "pct": 52 },
+              { "code": 3, "pct": 36 },
+              { "code": 99, "pct": 2 }
+            ]
+          }
+        }
+      ]
+    },
+
+    {
+      "wave_id": "trend_2022-12",
+      "label": "December 2022 - trend reference",
+      "field_dates": { "start": "2022-12-12", "end": "2022-12-18" },
+      "subgroups": [
+        {
+          "id": "age_18_29",
+          "label": "Adults 18-29",
+          "filters": [
+            { "variable_id": "age_band", "values": ["18_29"] }
+          ]
+        },
+        {
+          "id": "age_65_plus",
+          "label": "Adults 65 and older",
+          "filters": [
+            { "variable_id": "age_band", "values": ["65_plus"] }
+          ]
+        }
+      ],
+      "results": [
+        {
+          "question_id": "ai_heard",
+          "dimension_id": "main",
+          "base": { "kind": "all" },
+          "distribution": {
+            "kind": "categorical",
+            "entries": [
+              { "code": 1, "pct": 26 },
+              { "code": 2, "pct": 59 },
+              { "code": 3, "pct": 15 },
+              { "code": 99, "pct": 1 }
+            ]
+          }
+        },
+        {
+          "question_id": "ai_heard",
+          "dimension_id": "main",
+          "subgroup_id": "age_18_29",
+          "base": { "kind": "answered", "notes": "Pew's Pg. 13 trend chart reports only the 'A lot' share for this age cell." },
+          "distribution": {
+            "kind": "categorical",
+            "entries": [
+              { "code": 1, "pct": 33 }
+            ]
+          }
+        },
+        {
+          "question_id": "ai_heard",
+          "dimension_id": "main",
+          "subgroup_id": "age_65_plus",
+          "base": { "kind": "answered", "notes": "Pew's Pg. 13 trend chart reports only the 'A lot' share for this age cell." },
+          "distribution": {
+            "kind": "categorical",
+            "entries": [
+              { "code": 1, "pct": 19 }
+            ]
+          }
+        },
+        {
+          "question_id": "cncexc",
+          "dimension_id": "main",
+          "base": { "kind": "all" },
+          "distribution": {
+            "kind": "categorical",
+            "entries": [
+              { "code": 1, "pct": 15 },
+              { "code": 2, "pct": 38 },
+              { "code": 3, "pct": 46 },
+              { "code": 99, "pct": 1 }
+            ]
+          }
+        }
+      ]
+    },
+
+    {
+      "wave_id": "trend_2021-11",
+      "label": "November 2021 - trend reference (CNCEXC wording variant)",
+      "field_dates": { "start": "2021-11-01", "end": "2021-11-07" },
+      "notes": "This wave used the earlier CNCEXC wording (\"artificial intelligence computer programs\") and is encoded against question_id cncexc_2021. The local concept_ref \"cncexc\" bridges cncexc_2021 and cncexc for trend derivation.",
+      "results": [
+        {
+          "question_id": "cncexc_2021",
+          "dimension_id": "main",
+          "base": { "kind": "all" },
+          "distribution": {
+            "kind": "categorical",
+            "entries": [
+              { "code": 1, "pct": 18 },
+              { "code": 2, "pct": 37 },
+              { "code": 3, "pct": 45 },
+              { "code": 99, "pct": 1 }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
