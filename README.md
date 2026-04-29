@@ -4,26 +4,26 @@ A JSON schema for publishing public opinion survey toplines and crosstabs in a f
 
 ## Status
 
-Draft, under active development. The schema lives in the `dev` channel and changes without warning.
+Draft, under active development. The current schema lives in the `dev` "channel" and changes without warning.
 
 ## What we're building
 
-Internally, we use Iris to aggregate, analyze, and publish survey data from across the pollster landscape: Pew, Gallup, NORC, YouGov, Ipsos, and others. Every pollster publishes in its own bespoke topline format, and  everything downstream (comparison, trend lines, meta-analysis) requires PDF scaping. Iris is a common format that can house our internally produced data and other externally published data for comparison.
+Internally, we use Iris to aggregate, analyze, and publish survey data from across the pollster landscape: Pew, Gallup, NORC, YouGov, Ipsos, and others. Every pollster publishes in its own bespoke topline format, and  everything downstream (comparison, trend lines, meta-analysis) requires PDF scaping or CSV munging. Iris is a common format that can house our internally produced data and other externally published data for publication and comparison.
 
-Externally, the opportunity this may unlock is a 538 or Real Clear Politics for issue polling. Essentially, cross-pollster aggregation on the questions central to American politics: abortion, guns, immigration, AI, climate, healthcare, etc. The issue-polling universe is an order of magnitude more complex than the horserace one, but a robust approach to aggregation and comparison would make consensus and outlier results on public opinion more obvious and actionable. 
+Externally, the opportunity that Iris is designed to unlock is a 538 or RealClearPolitics for issue polling. Essentially, cross-pollster aggregation on the questions central to American politics: abortion, guns, immigration, AI, climate, healthcare, etc. The issue-polling universe is an order of magnitude more complex than the horserace one, but a robust approach to aggregation and comparison would make consensus and outlier results on public opinion more obvious and actionable. 
 
 ## Why not something else
 
-Four families of standards touch the data structure and format issue. None quite fit the job:
+There are at least four families of standards that speak to the data structure and format issues Iris is aimed at, but none of them quite fit the job:
 
 - **Survey-instrument formats** (DDI Codebook, DDI Lifecycle, Qualtrics QSF) describe questions and how they were asked. DDI Lifecycle has NCubes and DDI-CDI (2025) extends the family to multidimensional data, but neither variant is tailored for the kind of topline-plus-crosstab we're concerned with. QSF is a proprietary Qualtrics export, not an open standard.
 - **Statistical-aggregate formats** (SDMX, W3C RDF Data Cube) describe multidimensional tables of numbers. SDMX concept schemes and code lists can carry some of the semantics around a measure, but neither standard has a first-class place for question wording, response options, or the instrument context a topline depends on.
-- **Survey interchange formats** (Triple-S) move questions and microdata between commercial market-research systems. This is the closest existing prior art: it models question text, response options, and variable types. But it is microdata-shaped, has no native topline or crosstab structure, and has not been adopted by U.S. news or academic public-opinion publishers.
+- **Survey interchange formats** (Triple-S) move questions and microdata between commercial market-research systems. This is the closest existing prior art: Triple-S models question text, response options, and variable types, but it is orietned towards microdata, not aggregate statistics like toplines or crosstabs, and it has not been adopted by U.S. news or academic public-opinion publishers.
 - **Horserace aggregator conventions** (FiveThirtyEight, RealClearPolitics) are flat tables that fit ballots. They don't describe attitudinal batteries, matrices, or crosstabs. FiveThirtyEight's CSVs were the closest thing to a convention here. RealClearPolitics never published a format at all; its "data" is HTML tables that downstream tools scrape.
 
-We hope Iris can fill the gap between these standards. It borrows concepts from DDI and SDMX, but targets what pollsters actually publish.
+We aim for Iris to fill the gap between these standards. It mostly borrows concepts from DDI and SDMX, but it is intentionally lightweight and primarily targets the findings that pollsters publish (and that the public cares about).
 
-## Where to start
+## Getting started
 
 - **`iris.schema.json`** - the schema itself. JSON Schema draft 2020-12. Field descriptions are the authoritative reference.
 - **`examples/pew-atp-w173/`** - a fully worked example. Pew's American Trends Panel Wave 173, "AI and its impact" (June 2025), encoded end to end. Source PDFs under `sources/`, a walkthrough in `guide.md`, and the full instance at `instance.json`.
