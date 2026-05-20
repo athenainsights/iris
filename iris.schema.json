@@ -21,6 +21,11 @@
       "type": "string",
       "description": "Human-readable study title, e.g. \"Pew ATP Wave 173 — AI and its impact\". Shown in citations and dashboards."
     },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The time this export's published data last changed, as an RFC 3339 section 5.6 date-time in UTC, e.g. \"2026-05-20T14:30:00Z\". RFC 3339 requires a time offset; publishers SHOULD emit \"Z\" so values compare correctly as plain text. MUST advance whenever any published numbers or methodology fields change, such as a correction; SHOULD NOT advance for cosmetic edits. When two exports of the same study disagree, the later updated_at marks the newer revision. Newer is not the same as correct: confirm against source_urls. Pad to T00:00:00Z when only the revision date is known."
+    },
     "publisher": {
       "$ref": "#/$defs/Organization",
       "description": "The organization under whose name the study is published. For jointly branded releases (e.g. \"AP-NORC Center\"), use the joint brand as publisher and list the parent organizations in contributors."
@@ -161,14 +166,27 @@
           "type": "string",
           "description": "Human-readable wave label, e.g. \"Wave 173 — June 2025\"."
         },
+        "updated_at": {
+          "type": "string",
+          "format": "date-time",
+          "description": "The time this wave's published data last changed, as an RFC 3339 section 5.6 date-time in UTC, e.g. \"2026-05-20T14:30:00Z\". RFC 3339 requires a time offset; publishers SHOULD emit \"Z\" so values compare correctly as plain text. MUST advance whenever published numbers or methodology fields change, such as a correction; SHOULD NOT advance for cosmetic edits. When two exports of the same study disagree, the later updated_at marks the newer revision. Newer is not the same as correct: confirm against source_urls. Pad to T00:00:00Z when only the revision date is known."
+        },
         "field_dates": {
           "type": "object",
           "required": ["start", "end"],
           "additionalProperties": false,
-          "description": "[RECOMMENDED] Start and end of the fielding window, in ISO 8601 (YYYY-MM-DD). For continuous panels, use the published collection window for this wave. May be omitted for trend-reference waves whose field dates are not republished in the current topline.",
+          "description": "[RECOMMENDED] Start and end of the fielding window, each an RFC 3339 section 5.6 full-date (YYYY-MM-DD). For continuous panels, use the published collection window for this wave. May be omitted for trend-reference waves whose field dates are not republished in the current topline.",
           "properties": {
-            "start": { "type": "string", "format": "date" },
-            "end": { "type": "string", "format": "date" }
+            "start": {
+              "type": "string",
+              "format": "date",
+              "description": "First day of fielding."
+            },
+            "end": {
+              "type": "string",
+              "format": "date",
+              "description": "Last day of fielding."
+            }
           }
         },
         "sample": {
